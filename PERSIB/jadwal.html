@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jadwal Pertandingan Persib</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- Navbar -->
+   <nav>
+    <div class="logo">
+      <img src="beranda/logo persib nav.png" alt="Logo Persib">
+    </div>
+  
+       <div class="menu">
+      <a href="index.html">Beranda</a>
+      <a href="pemain.html">Pemain</a>
+     <!--  Dropdown Pertandingan -->
+    <div class="dropdown">
+      <a href="#">Pertandingan ▾</a>
+      <div class="dropdown-content">
+        <a href="jadwal.html">Jadwal</a>
+        <a href="hasil.html"class="active">Hasil Pertandingan</a>
+      </div>
+    </div>
+        <a href="berita.html">Berita</a>
+    </div>
+
+      <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </nav>
+    <div class="sidebar" id="sidebar">
+      <a href="index.html">Beranda</a>
+      <a href="pemain.html">Pemain</a>
+      <div class="sidebar-dropdown">
+    <a href="#" onclick="toggleDropdown(event)">Pertandingan ▾</a>
+    <div class="sidebar-dropdown-content">
+      <a href="jadwal.html"class="active">Jadwal</a>
+      <a href="hasil.html">Hasil Pertandingan</a>
+    </div>
+  </div>
+    <a href="berita.html">Berita</a>
+    </div>
+
+    <script>
+    function toggleMenu() {
+      document.getElementById("sidebar").classList.toggle("active");
+    }
+    </script>
+
+      <script>
+      function toggleSidebar() {
+        document.getElementById('sidebar').classList.toggle('active');
+      }
+      function toggleDropdown(event) {
+        event.preventDefault();
+        const dropdown = event.target.parentElement;
+        dropdown.classList.toggle('active');
+      }
+      </script>   
+
+  <main>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <h2 class="bulan">OKTOBER 2025</h2>
+
+    <!-- PERSIB VS BIAK -->
+    <div class="match-card">
+      <div class="match-header">
+        <div class="competition">
+          <img src="tim/bri .png" alt="Liga 1" />
+          <span>LIGA 1 INDONESIA</span>
+        </div>
+        <div class="date">JUM'AT, 17 OKTOBER 2025</div>
+      </div>
+
+      <div class="match-body">
+        <div class="team left">
+          <img src="tim/biak.png" alt="Arema FC">
+          <span>PSBS BIAK</span>
+        </div>
+
+        <div class="match-center">
+          <div class="time">19:00 WIB</div>
+        </div>
+
+        <div class="team right">
+          <img src="tim/prsb1.jpg" alt="Persib Bandung">
+          <span>PERSIB BANDUNG</span>
+        </div>
+      </div>
+
+      <div class="match-footer">
+        <span>Stadion Maguwoharjo</span>
+        
+      </div>
+    </div>
+
+    <!-- PERSIB VS SLFC -->
+    <div class="match-card">
+      <div class="match-header">
+        <div class="competition">
+          <img src="tim/acl.png" alt="AFC" />
+          <span>AFC CHAMPIONS LEAGUE 2</span>
+        </div>
+        <div class="date">KAMIS, 23 OKTOBER 2025</div>
+      </div>
+
+      <div class="match-body">
+        <div class="team left">
+          <img src="tim/prsb1.jpg" alt="Persib">
+          <span>PERSIB BANDUNG</span>
+        </div>
+
+        <div class="match-center">
+          <div class="time">19.15 WIB</div>
+        </div>
+
+        <div class="team right">
+          <img src="tim/slfc.png" alt="Persib Bandung">
+          <span>SELANGOR FC</span>
+        </div>
+      </div>
+
+      <div class="match-footer">
+        <span>Stadion Gelora Bandung Lautan Api</span>
+      </div>
+    </div>
+
+      <!-- PERSIB VS PERSIS -->
+      <div class="match-card">
+      <div class="match-header">
+        <div class="competition">
+          <img src="tim/bri .png" alt="AFC" />
+          <span>LIGA 1 INDONESIA</span>
+        </div>
+        <div class="date">KAMIS, 27 OKTOBER 2025</div>
+      </div>
+
+      <div class="match-body">
+        <div class="team left">
+          <img src="tim/prsb1.jpg" alt="Persib">
+          <span>PERSIB BANDUNG</span>
+        </div>
+
+        <div class="match-center">
+          <div class="time">15:30 WIB</div>
+        </div>
+
+        <div class="team right">
+          <img src="tim/oslo.png" alt="SOLO">
+          <span>PERSIS SOLO</span>
+        </div>
+      </div>
+
+      <div class="match-footer">
+        <span>Gelora Bandung Lautan Api</span>
+      </div>
+    </div>
+
+    <h2 class="bulan">NOVEMBER 2025</h2>
+    <!-- PERSIB VS BALI -->
+    <div class="match-card">
+      <div class="match-header">
+        <div class="competition">
+          <img src="tim/bri .png" alt="AFC" />
+          <span>LIGA 1 INDONESIA</span>
+        </div>
+        <div class="date">SABTU, 1 NOVEMBER 2025</div>
+      </div>
+
+      <div class="match-body">
+        <div class="team left">
+          <img src="tim/blu.png" alt="Bali United">
+          <span>BALI UNTED</span>
+        </div>
+
+        <div class="match-center">
+          <div class="time">19.00 WIB</div>
+        </div>
+
+        <div class="team right">
+          <img src="tim/prsb1.jpg" alt="Persib Bandung">
+          <span>PERSIB BANDUNG</span>
+        </div>
+      </div>
+
+      <div class="match-footer">
+        <span>Stadion Kapten I Wayan Dipta Gianyar</span>
+      </div>
+    </div>
+
+    <!-- PERSIB VS BALI -->
+    <div class="match-card">
+      <div class="match-header">
+        <div class="competition">
+          <img src="tim/acl.png" alt="AFC" />
+          <span>AFC CHAMPIONS LEAGUE 2</span>
+        </div>
+        <div class="date">KAMIS, 6 NOVEMBER 2025</div>
+      </div>
+
+      <div class="match-body">
+        <div class="team left">
+          <img src="tim/slfc.png" alt="Selangor">
+          <span>SELANGOR FC</span>
+        </div>
+
+        <div class="match-center">
+          <div class="time">19.15 WIB</div>
+        </div>
+
+        <div class="team right">
+          <img src="tim/prsb1.jpg" alt="Persib Bandung">
+          <span>PERSIB BANDUNG</span>
+        </div>
+      </div>
+
+      <div class="match-footer">
+        <span>Stadion Petaling Jaya</span>
+      </div>
+    </div>
+
+    <!-- PERSIB VS Malut -->
+    <div class="match-card">
+      <div class="match-header">
+        <div class="competition">
+          <img src="tim/bri .png" alt="AFC" />
+          <span>LIGA 1 INDONESIA</span>
+        </div>
+        <div class="date">MINGGU, 9 NOVEMBER 2025</div>
+      </div>
+
+      <div class="match-body">
+        <div class="team left">
+          <img src="tim/malut.jpg" alt="Malut United">
+          <span>BALI UNTED</span>
+        </div>
+
+        <div class="match-center">
+          <div class="time">19.00 WIB</div>
+        </div>
+
+        <div class="team right">
+          <img src="tim/prsb1.jpg" alt="Persib Bandung">
+          <span>PERSIB BANDUNG</span>
+        </div>
+      </div>
+
+      <div class="match-footer">
+        <span>Stadion Gelora Kie Raha Ternate</span>
+      </div>
+    </div>
+ <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-section footer-logo-section">
+      <img src="beranda/logo persib nav.png" alt="Logo Persib" class="footer-logo-large">
+    </div>
+
+    <div class="footer-section">
+      <h4>EMAIL</h4>
+      <p><a href="mailto:info@persib.co.id">info@persib.co.id</a></p>
+    </div>
+
+    <div class="footer-section">
+      <h4>MEDIA SOSIAL</h4>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/persib/"><img src="footer/FB_LOGO.png" alt="Facebook"></a>
+        <a href="https://www.facebook.com/PERSIB/"><img src="footer/Ig_logo.png" alt="Instagram"></a>
+      </div>
+    </div>
+
+    <div class="footer-section">
+      <h4>UNDUH APLIKASI</h4>
+      <div class="app-icons">
+        <a href=""><img src="footer/Appstore-white.webp" alt="App Store"></a>
+        <a href=""><img src="footer/Playstore-white.webp" alt="Google Play"></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  </main>
+  
+</body>
+
+</html>

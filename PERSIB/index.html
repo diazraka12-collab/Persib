@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width,
+initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<link rel ="icon" type ="image/png" href="favicon.png">
+<title>PERSIB</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
+
+</head> 
+<body>
+<!-- Navbar -->
+   <nav>
+    <div class="logo">
+      <img src="beranda/logo persib nav.png" alt="Logo Persib">
+    </div>
+  
+       <div class="menu">
+      <a href="index.html"class="active">Beranda</a>
+      <a href="pemain.html">Pemain</a>
+     <!--  Dropdown Pertandingan -->
+    <div class="dropdown">
+      <a href="#">Pertandingan ▾</a>
+      <div class="dropdown-content">
+        <a href="jadwal.html">Jadwal</a>
+        <a href="hasil.html">Hasil Pertandingan</a>
+      </div>
+    </div>
+        <a href="berita.html">Berita</a>
+    </div>
+
+      <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </nav>
+    <div class="sidebar" id="sidebar">
+      <a href="index.html" class="active">Beranda</a>
+      <a href="pemain.html">Pemain</a>
+      <div class="sidebar-dropdown">
+    <a href="#" onclick="toggleDropdown(event)">Pertandingan ▾</a>
+    <div class="sidebar-dropdown-content">
+      <a href="jadwal.html">Jadwal</a>
+      <a href="hasil.html">Hasil Pertandingan</a>
+    </div>
+  </div>
+
+  <a href="berita.html">Berita</a>
+</div>
+
+    <script>
+    function toggleMenu() {
+      document.getElementById("sidebar").classList.toggle("active");
+    }
+  </script>
+
+      <script>
+      function toggleSidebar() {
+        document.getElementById('sidebar').classList.toggle('active');
+      }
+      function toggleDropdown(event) {
+        event.preventDefault();
+        const dropdown = event.target.parentElement;
+        dropdown.classList.toggle('active');
+      }
+      </script>
+
+
+<!-- BERITA DI BERANDA!!!!!!!!!!!! -->
+<section class="news-section">
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <div class="news-container">
+    <div class="news-text">
+      <p class="news-category">BERITA TERBARU</p>
+      <h2 class="news-title">
+        PREVIEW PSBS VS<br>
+        PERSIB: MOTIVASI<br>
+        PERBAIKI POSISI
+      </h2>
+      <a href="https://persib.co.id/article-details/preview-psbs-vs-persib-motivasi-perbaiki-posisi"
+         class="news-link" target="_blank">
+         BACA SELENGKAPNYA →
+      </a>
+    </div>
+
+    <div class="news-image">
+      <img src="berita/beritaberanda.jpg" alt="Berita Terbaru">
+    </div>
+  </div>
+</section>
+
+<!-- Kolom Pertandingan Selanjutnya -->
+<section class="match-section">
+  <h2 class="section-title">PERTANDINGAN SELANJUTNYA</h2>
+  <div class="match-wrapper">    
+    <div class="next-match">
+      <div class="match-header">
+        <h3>Next Match</h3>
+        <a href="jadwal.html">Lihat Semua +</a>
+      </div>
+
+      <div class="match-content">
+        <div class="teams">
+          <div class="teamnext">
+          <img src="tim/prsb1.jpg" alt="Persib">
+          <h4>PERSIB BANDUNG</h4>
+        </div>
+
+        <div class="vs">VS</div>
+
+        <div class="teamnext">
+          <img src="tim/biak.png" alt="Biak">
+          <h4>PSBS BIAK</h4>
+        </div>
+        </div>
+        <div class="match-infoselanjutnya">
+          <p><strong>Liga 1 Indonesia</strong></p>
+          <p>17 Oktober 2025</p>
+          <p>19:00 WIB</p>
+          <p>Stadion Gelora Bandung Lautan Api</p>
+        </div>
+      </div>
+      </div>
+
+    <!-- Kolom Klasemen -->
+    <div class="standings">
+      <div class="match-header">
+        <h3>Klasemen</h3>
+        <a href="klasemen.html">Lihat Semua +</a>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Pos</th>
+            <th>Tim</th>
+            <th>P</th>
+            <th>W</th>
+            <th>D</th>
+            <th>L</th>
+            <th>PTS</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>PERSIB BANDUNG</td><td>8</td><td>6</td><td>2</td><td>0</td><td>20</td></tr>
+          <tr><td>2</td><td>PSM MAKASSAR</td><td>8</td><td>5</td><td>2</td><td>1</td><td>17</td></tr>
+          <tr><td>3</td><td>BALI UNITED</td><td>8</td><td>5</td><td>1</td><td>2</td><td>16</td></tr>
+          <tr><td>4</td><td>PERSEBAYA SURABAYA</td><td>8</td><td>4</td><td>2</td><td>2</td><td>14</td></tr>
+          <tr><td>5</td><td>PERSIJA JAKARTA</td><td>8</td><td>4</td><td>1</td><td>3</td><td>13</td></tr>
+          <tr><td>6</td><td>AREMA FC</td><td>8</td><td>3</td><td>2</td><td>3</td><td>11</td></tr>
+          <tr><td>7</td><td>BORNEO FC</td><td>8</td><td>3</td><td>2</td><td>3</td><td>11</td></tr>
+          <tr><td>8</td><td>DEWA UNITED</td><td>8</td><td>3</td><td>1</td><td>4</td><td>10</td></tr>
+          <tr><td>9</td><td>PSIS SEMARANG</td><td>8</td><td>2</td><td>3</td><td>3</td><td>9</td></tr>
+          <tr><td>10</td><td>PERSIK KEDIRI</td><td>8</td><td>2</td><td>2</td><td>4</td><td>8</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</section>
+<div class="page h1">
+    <h1>PERTANDINGAN TERAKHIR</h1>
+</div>
+  
+<section class="match-lastberanda">
+  <div class="match-container">
+    <div class="team">
+      <img src="tim/bangkok.jpeg" alt="Bangkok United">
+      <p class="team-name">BANGKOK UNITED</p>
+    </div>
+
+    <div class="score-box">
+      <span class="scoreberanda">0 - 2</span>
+    </div>
+
+    <div class="team">
+      <img src="tim/prsb1.jpg" alt="Persib Bandung">
+      <p class="team-name">PERSIB BANDUNG</p>
+    </div>
+  </div>
+
+  <div class="match-infoberanda">
+    <p>BRI Liga 1 Indonesia</p>
+    <p>Rabu, 1 Oktober 2025</p>
+    <p>Stadion GBLA</p>
+    <a href="https://youtu.be/PQCdjOjShpk?si=buuQqQCeaKwTgUf7" target="_blank" class="watch-link">
+      🎥 Tonton Ulang di YouTube
+    </a>
+  </div>
+</section>
+
+
+
+<!-- Bagian Sponsor -->
+<div class="sponsor-section">
+  <h2>PARTNER</h2>
+  <div class="sponsor-logos">
+
+    <a href="https://www.indofood.com/" target="_blank">
+    <img src="sponsor/indofood.webp" alt="Sponsor 1">
+    </a>
+
+    <a href="https://www.kopiabc.co.id/" target="_blank">
+     <img src="sponsor/Kopi_ABC_.webp" alt="Sponsor 2">
+    </a>
+
+    <a href="https://www.intersport.id/" target="_blank">
+    <img src="sponsor/intersport.webp" alt="Sponsor 3">
+    </a>
+
+    <a href="https://www.kelme.com/" target="_blank">
+      <img src="sponsor/Kelme.webp" alt="Kelme">
+    </a>
+
+    <a href="https://www.vivo.com/id" target="_blank">
+      <img src="sponsor/Vivo.webp" alt="Vivo">
+    </a>
+
+    <a href="https://greenfieldsdairy.com/id/" target="_blank">
+      <img src="sponsor/Greenfields.webp" alt="Greenfields">
+    </a>
+
+    <a href="https://www.btn.co.id/" target="_blank">
+      <img src="sponsor/balewebp.webp" alt="Balé by BTN">
+    </a>
+
+    <a href="https://combiphar.com/" target="_blank">
+      <img src="sponsor/combiphar.webp" alt="Combiphar">
+    </a>
+
+    <a href="https://www.insto.co.id/" target="_blank">
+      <img src="sponsor/indofood.webp" alt="Insto">
+    </a>
+
+    <a href="https://leminerale.com/" target="_blank">
+      <img src="sponsor/Le_Minerale.webp" alt="Le Minerale">
+    </a>
+
+    <a href="https://tehpucukharum.com/" target="_blank">
+      <img src="sponsor/Teh_Pucuk.webp" alt="Teh Pucuk Harum">
+    </a>
+
+    <a href="https://pantherenergy.id/" target="_blank">
+      <img src="sponsor/panther.webp" alt="Panther Energy">
+    </a>
+
+    <a href="https://persib.co.id/" target="_blank">
+      <img src="sponsor/Socios.webp" alt="SPersib">
+    </a>
+  </div>
+</div>
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-section footer-logo-section">
+      <img src="beranda/logo persib nav.png" alt="Logo Persib" class="footer-logo-large">
+    </div>
+
+    <div class="footer-section">
+      <h4>EMAIL</h4>
+      <p><a href="mailto:info@persib.co.id">info@persib.co.id</a></p>
+    </div>
+
+    <div class="footer-section">
+      <h4>MEDIA SOSIAL</h4>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/persib/"><img src="footer/FB_LOGO.png" alt="Facebook"></a>
+        <a href="https://www.facebook.com/PERSIB/"><img src="footer/Ig_logo.png" alt="Instagram"></a>
+      </div>
+    </div>
+
+    <div class="footer-section">
+      <h4>UNDUH APLIKASI</h4>
+      <div class="app-icons">
+        <a href=""><img src="footer/Appstore-white.webp" alt="App Store"></a>
+        <a href=""><img src="footer/Playstore-white.webp" alt="Google Play"></a>
+      </div>
+    </div>
+  </div>
+</footer>
+</script>
+</body>
+</html> 

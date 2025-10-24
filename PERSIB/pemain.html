@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daftar Pemain Persib</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel ="icon" type ="image/png" href="favicon.png">
+  <title>Daftar Pemain Persib</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
+
+</head> 
+<body>
+<!-- Navbar -->
+   <nav>
+    <div class="logo">
+      <img src="beranda/logo persib nav.png" alt="Logo Persib">
+    </div>
+  
+       <div class="menu">
+      <a href="index.html">Beranda</a>
+      <a href="pemain.html"class="active">Pemain</a>
+     <!--  Dropdown Pertandingan -->
+    <div class="dropdown">
+      <a href="#">Pertandingan ▾</a>
+      <div class="dropdown-content">
+        <a href="jadwal.html">Jadwal</a>
+        <a href="hasil.html">Hasil Pertandingan</a>
+      </div>
+    </div>
+        <a href="berita.html">Berita</a>
+    </div>
+
+      <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </nav>
+    <div class="sidebar" id="sidebar">
+      <a href="index.html">Beranda</a>
+      <a href="pemain.html"class="active">Pemain</a>
+      <div class="sidebar-dropdown">
+    <a href="#" onclick="toggleDropdown(event)">Pertandingan ▾</a>
+    <div class="sidebar-dropdown-content">
+      <a href="jadwal.html">Jadwal</a>
+      <a href="hasil.html">Hasil Pertandingan</a>
+    </div>
+  </div>
+    <a href="berita.html">Berita</a>
+    </div>
+
+    <script>
+    function toggleMenu() {
+      document.getElementById("sidebar").classList.toggle("active");
+    }
+    </script>
+
+      <script>
+      function toggleSidebar() {
+        document.getElementById('sidebar').classList.toggle('active');
+      }
+      function toggleDropdown(event) {
+        event.preventDefault();
+        const dropdown = event.target.parentElement;
+        dropdown.classList.toggle('active');
+      }
+      </script>
+
+  <main class="halaman-pemain">
+  <section class="daftar-pemain">
+  <h1>DAFTAR PEMAIN</h1>
+  </section>
+<section class="pemain-container">
+  <main>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <h2 class="posisi">KIPER </h2>
+    <div class="player-grid kiper">
+      <a href="pemain/bioteja/teja.html " class="player-card">
+      <img src="pemain/teja.jpg" alt="Teja Paku Alam">
+      <div class="player-name">Teja Paku Alam</div>
+      </a>
+       <a href="pemain/bioadampryzbek/adam.html" class="player-card">
+    <img src="pemain/adam.jpg" alt="Adam Pryzbek">
+    <div class="player-name">Adam Pryzbek</div>
+  </a>
+
+  <a href="pemain/biofitrah/Fitrah Maulana.html" class="player-card">
+    <img src="pemain/fitrah.jpg" alt="Fitrah Maulana">
+    <div class="player-name">Fitrah Maulana</div>
+  </a>
+
+    </div>
+    <h2 class="posisi">bek</h2>
+    <div class="player-grid bek">
+       <a href="pemain/biojulio/julio.html" class="player-card">
+    <img src="pemain/julio.jpg" alt="Julio César">
+    <div class="player-name">Julio César</div>
+  </a>
+
+  <a href="pemain/biokakang/kakang.html" class="player-card">
+    <img src="pemain/kakang.jpg" alt="Kakang Rudianto">
+    <div class="player-name">Kakang Rudianto</div>
+  </a>
+
+  <a href="pemain/bioeliano/eliano.html" class="player-card">
+    <img src="pemain/eliano.jpg" alt="Eliano Reijnders">
+    <div class="player-name">Eliano Reijnders</div>
+  </a>
+
+  <a href="pemain/biodewa/dewangga.html" class="player-card">
+    <img src="pemain/dewa.jpg" alt="Dewangga">
+    <div class="player-name">Dewangga</div>
+  </a>
+
+  <a href="pemain/biobarba/federico.html" class="player-card">
+    <img src="pemain/Barba.jpg" alt="Federico Barba">
+    <div class="player-name">Federico Barba</div>
+  </a>
+       <a href="pemain/biorezaldi/rezaldi.html" class="player-card">
+    <img src="pemain/rezaldi.jpg" alt="Rezaldi Hehanusa">
+    <div class="player-name">Rezaldi Hehanusa</div>
+  </a>
+
+     <a href="pemain/biohamra/alhamra.html" class="player-card">
+    <img src="pemain/alhamra.jpg" alt="Alhamra Hehanusa">
+    <div class="player-name">Alhamra Hehanusa</div>
+  </a>
+    <a href="pemain/biopatricio/patricio.html" class="player-card">
+    <img src="pemain/patricio.jpg" alt="Patricio Matricardi">
+    <div class="player-name">Patricio Matricardi</div>
+  </a>
+
+       <a href="pemain/bioachmad/achmad.html" class="player-card">
+    <img src="pemain/achmad j.jpg" alt="Achmad Jufriyanto">
+    <div class="player-name">Achmad Jufriyanto</div>
+  </a>
+  <a href="pemain/biofrans/frans.html" class="player-card">
+    <img src="pemain/frans.jpg" alt="Frans Putros">
+    <div class="player-name">Frans Putros</div>
+  </a>
+    </div>
+    </div>
+        <!-- Bagian Gelandang -->
+    <h2 class="posisi">Gelandang</h2>
+    <div class="player-grid gelandang">
+     <a href="pemain/biohaye/haye.html" class="player-card">
+    <img src="pemain/Haye.jpg" alt="Thom Haye">
+    <div class="player-name">Thom Haye</div>
+  </a>
+
+  <a href="pemain/biobeckham/beckham.html" class="player-card">
+    <img src="pemain/beckham.jpg" alt="Beckham Putra">
+    <div class="player-name">Beckham Putra</div>
+  </a>
+
+  <a href="pemain/biogyu/luciano.html" class="player-card">
+    <img src="pemain/luciano.jpg" alt="Luciano Guaycochea">
+    <div class="player-name">Luciano Guaycochea</div>
+  </a>
+
+  <a href="pemain/biowiliam/wiliam.html" class="player-card">
+    <img src="pemain/william.jpg" alt="William Marcilio">
+    <div class="player-name">William Marcilio</div>
+  </a>
+
+  <a href="pemain/bioberguinho/berguinho.html" class="player-card">
+    <img src="pemain/berg.jpg" alt="Rosemberg da Silva">
+    <div class="player-name">Rosemberg da Silva</div>
+  </a>
+
+  <a href="pemain/biorobi/robi.html" class="player-card">
+    <img src="pemain/robi.jpg" alt="Robi Darwis">
+    <div class="player-name">Robi Darwis</div>
+  </a>
+
+  <a href="pemain/bioadam/adam.html" class="player-card">
+  <img src="pemain/adam al.jpg" alt="Adam Alis">
+  <div class="player-name">Adam Alis</div>
+</a>
+
+  <a href="pemain/bionazriel/nazriel.html" class="player-card">
+    <img src="pemain/nazriel.jpg" alt="Nazriel Alvaro">
+    <div class="player-name">Nazriel Alvaro</div>
+  </a>
+
+  <a href="pemain/bioklok/klok.html" class="player-card">
+    <img src="pemain/klok.jpg" alt="Marc Klok">
+    <div class="player-name">Marc Klok</div>
+  </a>
+    </div></div>
+
+    <!-- Bagian Penyerang -->
+    <h2 class="posisi">Penyerang</h2>
+    <div class="player-grid penyerang">
+      <a href="pemain/biozul/zul.html" class="player-card">
+    <img src="pemain/zul.jpg" alt="Zulkifli Lakmansyah">
+    <div class="player-name">Zulkifli Lukmansyah</div>
+  </a>
+
+  <a href="pemain/biouiliam/uiliam.html" class="player-card">
+    <img src="pemain/uiliam.jpg" alt="Uiliam Barros">
+    <div class="player-name">Uiliam Barros</div>
+  </a>
+
+  <a href="pemain/biofebri/febri.html" class="player-card">
+    <img src="pemain/febri.jpg" alt="Febri Hariyadi">
+    <div class="player-name">Febri Hariyadi</div>
+  </a>
+
+  <a href="pemain/bioramon/ramon.html" class="player-card">
+    <img src="pemain/ramon.jpg" alt="Ramon Tanque">
+    <div class="player-name">Ramon Tanque</div>
+  </a>
+
+  <a href="pemain/biosaddil/saddil.html" class="player-card">
+    <img src="pemain/saddil.jpg" alt="Saddil Ramdani">
+    <div class="player-name">Saddil Ramdani</div>
+  </a>
+
+  <a href="pemain/bioandrew/andrew.html" class="player-card">
+    <img src="pemain/andrew.jpg" alt="Andrew Jung">
+    <div class="player-name">Andrew Jung</div>
+  </a>
+      </div>
+    </div>
+
+  </main>
+
+  
+  <!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-section footer-logo-section">
+      <img src="beranda/logo persib nav.png" alt="Logo Persib" class="footer-logo-large">
+    </div>
+
+    <div class="footer-section">
+      <h4>EMAIL</h4>
+      <p><a href="mailto:info@persib.co.id">info@persib.co.id</a></p>
+    </div>
+
+    <div class="footer-section">
+      <h4>MEDIA SOSIAL</h4>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/persib/"><img src="footer/FB_LOGO.png" alt="Facebook"></a>
+        <a href="https://www.facebook.com/PERSIB/"><img src="footer/Ig_logo.png" alt="Instagram"></a>
+      </div>
+    </div>
+
+    <div class="footer-section">
+      <h4>UNDUH APLIKASI</h4>
+      <div class="app-icons">
+        <a href=""><img src="footer/Appstore-white.webp" alt="App Store"></a>
+        <a href=""><img src="footer/Playstore-white.webp" alt="Google Play"></a>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
+

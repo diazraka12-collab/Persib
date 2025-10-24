@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prestasi Persib</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+   <div class="navbar">
+    <div class="logo">
+    <img src="beranda/logo persib nav.png" alt="Persib Logo">
+    
+    </div>
+    
+    <!-- Tombol garis tiga -->
+  <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+    
+    <ul class="menu">
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="pemain.html">Pemain</a></li>
+      <li><a href="jadwal.html">Jadwal</a></li>
+      <li><a href="prestasi.html">Prestasi</a></li>
+      <li><a href="berita.html">Berita</a></li>
+    </ul>
+  </div> 
+
+  <script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const menu = document.querySelector('.menu');
+
+  menuToggle.addEventListener('click', () => {
+    menu.classList.toggle('show');
+  });
+</script>
+
+  <div class="prestasi-container">
+    <section class="prestasi-section">
+      <div class="prestasi-text">
+        <h2>Perserikatan</h2>
+        <ul>
+          <li>Juara 1 pada tahun 1937</li>
+          <li>Juara 1 pada tahun 1961</li>
+          <li>Juara 1 pada tahun 1986</li>
+          <li>Juara 1 pada tahun 1989–1990</li>
+          <li>Juara 1 pada tahun 1993–1994</li>
+        </ul>
+      </div>
+      <div class="prestasi-images">
+        <img src="prestasi/persibold.jpg" alt="Tim Persib Perserikatan">
+      </div>
+    </section>
+
+    <section class="prestasi-section">
+      <div class="prestasi-text">
+        <h2>Liga Indonesia</h2>
+        <ul>
+          <li>Juara 1 pada tahun 1994–1995</li>
+          <li>Juara 1 pada tahun 2014</li>
+          <li>Juara 1 pada tahun 2023–2024</li>
+          <li>Juara 1 pada tahun 2024–2025</li>
+        </ul>
+      </div>
+      <div class="prestasi-images">
+        <img src="prestasi/juara23.jpg" alt="Juara Liga Indonesia 2024">
+        <img src="prestasi/juara24.jpg" alt="Juara Liga Indonesia 2025">
+      </div>
+    </section>
+  </div>
+</body>
+</html>
