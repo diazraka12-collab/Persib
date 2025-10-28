@@ -1,0 +1,89 @@
+<!DOCTYPE html> 
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../../pemaindetail.css" />
+  <link rel ="icon" type ="image/png" href="../../favicon.png">
+  <title>Profil Luciano Guaycochea | Persib Bandung</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- Navbar -->
+   <nav>
+    <div class="logo">
+      <img src="../../beranda/logo persib nav.png" alt="Logo Persib">
+    </div>
+  
+    <div class="menu">
+      <a href="../../index.html">Beranda</a>
+      <a href="../../pemain.html"class="active">Pemain</a>
+     <!--  Dropdown Pertandingan -->
+    <div class="dropdown">
+      <a href="#">Pertandingan ▾</a>
+      <div class="dropdown-content">
+        <a href="../../jadwal.html">Jadwal</a>
+        <a href="../../hasil.html">Hasil Pertandingan</a>
+      </div>
+    </div>
+      <a href="../../berita.html">Berita</a>
+    </div>
+
+      <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </nav>  
+
+    <div class="sidebar" id="sidebar">
+      <a href="../../index.html">Beranda</a>
+      <a href="pemain.html"class="active">Pemain</a>
+      <div class="sidebar-dropdown">
+       <a href="#" onclick="toggleDropdown(event)">Pertandingan ▾</a>
+    <div class="sidebar-dropdown-content">
+      <a href="../../jadwal.html">Jadwal</a>
+      <a href="../../hasil.html">Hasil Pertandingan</a>
+    </div>
+   </div>
+      <a href="../../berita.html">Berita</a>
+    </div>
+    
+    <script>
+    function toggleMenu() {
+      document.getElementById("sidebar").classList.toggle("active");
+    }
+    </script>
+
+      <script>
+      function toggleSidebar() {
+        document.getElementById('sidebar').classList.toggle('active');
+      }
+      function toggleDropdown(event) {
+        event.preventDefault();
+        const dropdown = event.target.parentElement;
+        dropdown.classList.toggle('active');
+      }
+      </script>
+  <main class="profil-pemain">
+    <div class="profil-container">
+      <div class="foto-pemain">
+        <img src="../luciano.jpg" alt="Luciano Guaycochea">
+      </div>
+
+      <div class="info-pemain">
+        <h2>INFO</h2>
+        <ul>
+          <li><span>Nama Lengkap</span> Luciano Daniel Guaycochea</li>
+          <li><span>Tanggal Lahir</span> 24 April 1992</li>
+          <li><span>Tempat Lahir</span> La Pampa, Argentina</li>
+          <li><span>Kewarganegaraan</span> Argentina</li>
+          <li><span>Posisi</span> Gelandang Serang</li>
+          <li><span>Nomor Punggung</span> 8</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width,
+initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<link rel ="icon" type ="image/png" href="favicon.png">
+<title>berita 1</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
+
+</head> 
+<body>
+<!-- Navbar -->
+   <nav>
+    <div class="logo">
+      <img src="beranda/logo persib nav.png" alt="Logo Persib">
+    </div>
+  
+       <div class="menu">
+      <a href="index.html"class="active">Beranda</a>
+      <a href="pemain.html">Pemain</a>
+     <!--  Dropdown Pertandingan -->
+    <div class="dropdown">
+      <a href="#">Pertandingan ▾</a>
+      <div class="dropdown-content">
+        <a href="jadwal.html">Jadwal</a>
+        <a href="hasil.html">Hasil Pertandingan</a>
+      </div>
+    </div>
+        <a href="berita.html"class="active">Berita</a>
+    </div>
+
+      <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </nav>
+    <div class="sidebar" id="sidebar">
+      <a href="index.html" >Beranda</a>
+      <a href="pemain.html">Pemain</a>
+      <div class="sidebar-dropdown">
+    <a href="#" onclick="toggleDropdown(event)">Pertandingan ▾</a>
+    <div class="sidebar-dropdown-content">
+      <a href="jadwal.html">Jadwal</a>
+      <a href="hasil.html">Hasil Pertandingan</a>
+    </div>
+  </div>
+
+  <a href="berita.html"class="active">Berita</a>
+</div>
+
+    <script>
+    function toggleMenu() {
+      document.getElementById("sidebar").classList.toggle("active");
+    }
+  </script>
+
+      <script>
+      function toggleSidebar() {
+        document.getElementById('sidebar').classList.toggle('active');
+      }
+      function toggleDropdown(event) {
+        event.preventDefault();
+        const dropdown = event.target.parentElement;
+        dropdown.classList.toggle('active');
+      }
+      </script>
+
+<!-- Foto -->
+  <section class="prsb-foto">
+    <img src="berita/berita1.jpg" alt="Djadjang Nurdjaman merayakan kemenangan Persib di Bangkok">
+  </section>
+   <!-- Section Judul -->
+  <section class="prsb-judul">
+    <h1>Nostalgia Djanur Rayakan Kemenangan di Bangkok</h1>
+    <p>Muhammad Jatnika Sadili</p>
+  </section>
+
+  <!-- Artikel -->
+  <article class="prsb-artikel">
+    <p>
+      Kemenangan 2-0 PERSIB atas Bangkok United pada pertandingan kedua Grup G AFC Champions League Two (ACL Two) 2025/26 di Stadion Pathum Thani, Thailand, Rabu, 1 Oktober 2025 lalu, menyisakan kesan mendalam buat Djadjang Nurdjaman. Mantan pemain dan pelatih yang kini menjabat Direktur Teknik PERSIB ini turut menyaksikan langsung dan merayakan kemenangan Maung Bandung di Bangkok ini.
+    </p>
+
+    <p>
+      Melalui gol yang disumbangkan Andrew Jung menit 41 dan Uilliam Barros menit 71, kemenangan di Thailand itu merupakan yang pertama di kompetisi Asia setelah 30 tahun. PERSIB terakhir kali menang di Thailand saat mengalahkan Bangkok Bank 2-0 pada pertandingan leg pertama putaran pertama Piala Champions Asia 1995/96 di Stadion Universitas Chulalongkorn, 16 September 1995.
+    </p>
+
+    <p>
+      Ketika momen kemenangan di Bangkok 30 tahun silam, Djanur merupakan asisten pelatih Indra M. Tohir yang menangani PERSIB. Sosok yang pernah mengantarkan PERSIB menjadi juara sebagai pemain dan pelatih ini mengaku bangga bisa bernostalgia dan menyaksikan dua kemenangan bersejarah di Thailand.
+    </p>
+    <p>
+        "Sangat membanggakan, sekaligus bernostalgia. Kemenangan di Bangkok luar biasa. Biasanya, tim-tim Indonesia 'kan agak sulit menang di Bangkok. Setelah 30 tahun, kali ini PERSIB bisa mengalahkan tuan runah dengan skor yang identik 2-0," kata pelatih yang membawa PERSIB menjuarai Indonesia Super League 2014 ini.
+    </p>
+    <p>Namun, Djanur merasakan perbedaan yang mencolok dari dua kemenangan yang diraih PERSIB dari Bangkok Bank dan Bangkok United. Apa itu?
+"Lapangannya sangat berbeda. Kalau sekarang main di lapangan yang jauh lebih bagus. Kalau dulu kurang bagus. Sekarang, main bagus di lapangan bagus. Disamping menang, kita menampilkan permainan yang bagus," ucapnya.</p>
+        <p>Djanur berharap tim asuhan Bojan Hodak bisa terus melaju ke babak selanjutnya. Dengan nilai 4 dari 2 pertandingan, PERSIB berada di peringkat kedua klasemen sementara Grup G. Poin Pangeran Biru sama dengan Lion City Sailors yang di saat bersamaan menang 4-2 atas Selangor FC.</p>
+        <p>
+            "Mudah mudahan pertandingan selanjutnya bukan tidak mungkin PERSIB bisa meraih kemenangan terus dan bisa lolos dari fase grup, terus melaju dan mudah mudahan bisa melangkah jauh di ACL 2 ini," kata Djanur.
+        </p>
+        <p>
+            Sebagai catatan, setelah mengalahkan Bangkok Bank, PERSIB terus melaju di Piala Champions Asia 1995/96 hingga menembus babak pertempat final sebelum dihentikan tiga klub raksasa Asia, Verdy Kawasaki (Jepang), Ilhwa Chunma (Korea Selatan) dan Thai Farmers Bank (Thailand).***
+        </p>
+    </article>
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-section footer-logo-section">
+      <img src="beranda/logo persib nav.png" alt="Logo Persib" class="footer-logo-large">
+    </div>
+
+    <div class="footer-section">
+      <h4>EMAIL</h4>
+      <p><a href="mailto:info@persib.co.id">info@persib.co.id</a></p>
+    </div>
+
+    <div class="footer-section">
+      <h4>MEDIA SOSIAL</h4>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/PERSIB/"><img src="footer/FB_LOGO.png" alt="Facebook"></a>
+        <a href="https://www.instagram.com/persib/"><img src="footer/Ig_logo.png" alt="Instagram"></a>
+      </div>
+    </div>
+
+    <div class="footer-section">
+      <h4>UNDUH APLIKASI</h4>
+      <div class="app-icons">
+        <a href="https://apps.apple.com/id/app/persib/id1240095475?l=id"><img src="footer/Appstore-white.webp" alt="App Store"></a>
+        <a href="https://play.google.com/store/apps/details?id=com.persib.persibpass"><img src="footer/Playstore-white.webp" alt="Google Play"></a>
+      </div>
+    </div>
+  </div>
+</footer>
+</script>
+</body>
+</html> 

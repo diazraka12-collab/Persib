@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width,
+initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<link rel ="icon" type ="image/png" href="favicon.png">
+<title>berita 1</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
+
+</head> 
+<body>
+<!-- Navbar -->
+   <nav>
+    <div class="logo">
+      <img src="beranda/logo persib nav.png" alt="Logo Persib">
+    </div>
+  
+       <div class="menu">
+      <a href="index.html">Beranda</a>
+      <a href="pemain.html">Pemain</a>
+     <!--  Dropdown Pertandingan -->
+    <div class="dropdown">
+      <a href="#">Pertandingan ▾</a>
+      <div class="dropdown-content">
+        <a href="jadwal.html">Jadwal</a>
+        <a href="hasil.html">Hasil Pertandingan</a>
+      </div>
+    </div>
+        <a href="berita.html"class="active">Berita</a>
+    </div>
+
+      <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </nav>
+    <div class="sidebar" id="sidebar">
+      <a href="index.html" >Beranda</a>
+      <a href="pemain.html">Pemain</a>
+      <div class="sidebar-dropdown">
+    <a href="#" onclick="toggleDropdown(event)">Pertandingan ▾</a>
+    <div class="sidebar-dropdown-content">
+      <a href="jadwal.html">Jadwal</a>
+      <a href="hasil.html">Hasil Pertandingan</a>
+    </div>
+  </div>
+
+  <a href="berita.html"class="active">Berita</a>
+</div>
+
+    <script>
+    function toggleMenu() {
+      document.getElementById("sidebar").classList.toggle("active");
+    }
+  </script>
+
+      <script>
+      function toggleSidebar() {
+        document.getElementById('sidebar').classList.toggle('active');
+      }
+      function toggleDropdown(event) {
+        event.preventDefault();
+        const dropdown = event.target.parentElement;
+        dropdown.classList.toggle('active');
+      }
+      </script>
+
+      
+  <!-- Foto -->
+  <section class="prsb-foto">
+    <img src="berita/beritaberanda.jpg" alt="Preview pertandingan PSBS Biak vs PERSIB">
+  </section>
+ <!-- Judul -->
+  <section class="prsb-judul">
+    <h1>Preview PSBS vs PERSIB: Motivasi Perbaiki Posisi</h1>
+    <p><strong>16 Oktober 2025 • 20:41 WIB</strong> — Oleh: Fajar Rahman</p>
+  </section>
+  <!-- Artikel -->
+  <article class="prsb-artikel">
+    <p>
+      Usai jeda internasional sekitar dua pekan, PERSIB menargetkan perbaikan posisi di klasemen sementara Super League 2025/26. Karena itu, tiga poin akan diperjuangkan untuk direbut dari tuan rumah PSBS Biak pada laga pekan kesembilan di Stadion Maguwoharjo, Sleman, Jumat, 17 Oktober 2025, pukul 19.00 WIB.
+    </p>
+
+    <p>
+      Menjelang laga, PERSIB berada di peringkat ketujuh klasemen sementara dengan mengumpulkan nilai 10, hasil 3 kali menang, sekali imbang dan 2 kekalahan.
+    </p>
+
+    <p>
+      Kembali bergabungnya sejumlah pemain dari tugas negara seperti Marc Klok, Beckham Putra Nugraha, Thom Haye, Eliano Reijnders, Robi Darwis dan Kakang Rudianto membuat kekuatan tim Pangeran Biru nyaris lengkap. Hanya Frans Putros yang terpaksa absen akibat hukuman tambahan akibat kartu merah yang diterimanya dan penjaga gawang Adam Pryzbek karena sakit.
+    </p>
+
+    <p>
+      Pelatih PERSIB, Bojan Hodak menegaskan, para pemain tim nasional sudah bisa diturunkan. "Kendalanya mungkin cuaca yang berbeda antara di (Arab) Saudi dan di sini. Tapi mereka cukup memiliki waktu untuk istirahat dan siap," ujar Hodak dalam sesi konferensi pers sebelum pertandingan, Kamis, 16 Oktober 2025.
+    </p>
+
+    <p>
+      Kapten tim, Marc Klok pun membenarkan hal tersebut. Malah ia memiliki motivasi tambahan dengan kemenangan tandang PERSIB atas Bangkok United di AFC Champions League Two lalu.
+    </p>
+
+    <p>
+      "Cukup lama kita tidak main di liga. Dua minggu. Setelah kita menang di Bangkok, kami termotivasi untuk membantu tim memperbaiki posisi di klasemen," timpal Klok.
+    </p>
+
+    <p>
+      Apa yang diutarakan Klok itu terendus oleh lawan. Pelatih PSBS Biak, Divaldo Alves memprediksi, PERSIB akan menyerang sejak menit awal.
+    </p>
+
+    <p>
+      "PERSIB pasti motivasi tinggi karena mereka menang lawan Bangkok. Sebelum itu mereka kalah dari Persita Tangerang, dan tim yang berada di papan tengah klasemen pasti mereka datang dengan agresif dari awal pertandingan," ujar Divaldo.***
+    </p>
+  </article>
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-section footer-logo-section">
+      <img src="beranda/logo persib nav.png" alt="Logo Persib" class="footer-logo-large">
+    </div>
+
+    <div class="footer-section">
+      <h4>EMAIL</h4>
+      <p><a href="mailto:info@persib.co.id">info@persib.co.id</a></p>
+    </div>
+
+    <div class="footer-section">
+      <h4>MEDIA SOSIAL</h4>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/PERSIB/"><img src="footer/FB_LOGO.png" alt="Facebook"></a>
+        <a href="https://www.instagram.com/persib/"><img src="footer/Ig_logo.png" alt="Instagram"></a>
+      </div>
+    </div>
+
+    <div class="footer-section">
+      <h4>UNDUH APLIKASI</h4>
+      <div class="app-icons">
+        <a href="https://apps.apple.com/id/app/persib/id1240095475?l=id"><img src="footer/Appstore-white.webp" alt="App Store"></a>
+        <a href="https://play.google.com/store/apps/details?id=com.persib.persibpass"><img src="footer/Playstore-white.webp" alt="Google Play"></a>
+      </div>
+    </div>
+  </div>
+</footer>
+</script>
+</body>
+</html> 

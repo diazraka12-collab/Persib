@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+   <link rel ="icon" type ="image/png" href="favicon.png">
+  <title>Hasil Pertandingan Persib</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- Navbar -->
+   <nav>
+    <div class="logo">
+      <img src="beranda/logo persib nav.png" alt="Logo Persib">
+    </div>
+  
+       <div class="menu">
+      <a href="index.html">Beranda</a>
+      <a href="pemain.html">Pemain</a>
+     <!--  Dropdown Pertandingan -->
+    <div class="dropdown">
+      <a href="#">Pertandingan ▾</a>
+      <div class="dropdown-content">
+        <a href="jadwal.html">Jadwal</a>
+        <a href="hasil.html"class="active">Hasil Pertandingan</a>
+      </div>
+    </div>
+        <a href="berita.html">Berita</a>
+    </div>
+
+      <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </nav>
+    <div class="sidebar" id="sidebar">
+      <a href="index.html">Beranda</a>
+      <a href="pemain.html">Pemain</a>
+      <div class="sidebar-dropdown">
+    <a href="#" onclick="toggleDropdown(event)">Pertandingan ▾</a>
+    <div class="sidebar-dropdown-content">
+      <a href="jadwal.html"class="active">Jadwal</a>
+      <a href="hasil.html">Hasil Pertandingan</a>
+    </div>
+  </div>
+    <a href="berita.html">Berita</a>
+    </div>
+
+    <script>
+    function toggleMenu() {
+      document.getElementById("sidebar").classList.toggle("active");
+    }
+    </script>
+
+      <script>
+      function toggleSidebar() {
+        document.getElementById('sidebar').classList.toggle('active');
+      }
+      function toggleDropdown(event) {
+        event.preventDefault();
+        const dropdown = event.target.parentElement;
+        dropdown.classList.toggle('active');
+      }
+      </script>
+
+<section class="hasil-pertandingan">
+
+      <div class="judul-bulan">Oktober 2025</div>
+<!-- Liga 1 -->
+  <div class="matchresult">
+    <div class="matchresult-info">
+      <span>LIGA 1 INDONESIA</span>
+      <span>Senin, 27 Oktober 2025 — Stadion GBLA</span>
+    </div>
+    <div class="matchresult-content">
+      <div class="team home">
+        <span>Persib Bandung</span>
+        <img src="tim/prsb1.jpg" alt="Persib Bandung">
+      </div>
+      <div class="score">2 - 0</div>
+      <div class="team away">
+        <img src="tim/oslo.png" alt="Persis Solo">
+        <span>Persis Solo</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Piala AFC - 2 -->
+  <div class="matchresult">
+    <div class="matchresult-info">
+      <span>Piala AFC · Fase grup</span>
+      <span>Jumat, 23 Oktober 2025— Stadion GBLA</span>
+    </div>
+    <div class="matchresult-content">
+      <div class="team home">
+        <span>Persib Bandung</span>
+        <img src="tim/prsb1.jpg" alt="Persib Bandung">
+      </div>
+      <div class="score">2 - 0</div>
+      <div class="team away">
+        <img src="tim/slfc.png" alt="Selangor">
+        <span>Selangor FC</span>
+      </div>
+    </div>
+  </div>
+
+ <!-- Liga 1 -->
+  <div class="matchresult">
+    <div class="matchresult-info">
+      <span>LIGA 1 INDONESIA</span>
+      <span>Jumat, 17 Oktober 2025 — Stadion Cendrawasih</span>
+    </div>
+    <div class="matchresult-content">
+      <div class="team home">
+        <span>PSBS Biak</span>
+        <img src="tim/biak.png" alt="PSBS Biak">
+      </div>
+      <div class="score">0 - 3</div>
+      <div class="team away">
+        <img src="tim/prsb1.jpg" alt="Persib Bandung">
+        <span>Persib Bandung</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Piala AFC - 2 -->
+  <div class="matchresult">
+    <div class="matchresult-info">
+      <span>Piala AFC · Fase grup</span>
+      <span>Selasa, 1 Oktober 2025</span>
+    </div>
+    <div class="matchresult-content">
+      <div class="team home">
+        <span>Bangkok United</span>
+        <img src="tim/bangkok.jpeg" alt="Bangkok United">
+      </div>
+      <div class="score">0 - 2</div>
+      <div class="team away">
+        <img src="tim/prsb1.jpg" alt="Persib Bandung">
+        <span>Persib Bandung</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="judul-bulan">september 2025</div>
+  <!-- Liga 1 -->
+  <div class="matchresult">
+    <div class="matchresult-info">
+      <span>LIGA 1 INDONESIA</span>
+      <span>Sabtu, 27 September 2025</span>
+    </div>
+    <div class="matchresult-content">
+      <div class="team home">
+        <span>Persita</span>
+        <img src="tim/persita.png" alt="Persita">
+      </div>
+      <div class="score">2 - 1</div>
+      <div class="team away">
+        <img src="tim/prsb1.jpg" alt="Persib Bandung">
+        <span>Persib Bandung</span>
+      </div>
+    </div>
+ </div>
+</section> 
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-section footer-logo-section">
+      <img src="beranda/logo persib nav.png" alt="Logo Persib" class="footer-logo-large">
+    </div>
+
+    <div class="footer-section">
+      <h4>EMAIL</h4>
+      <p><a href="mailto:info@persib.co.id">info@persib.co.id</a></p>
+    </div>
+
+    <div class="footer-section">
+      <h4>MEDIA SOSIAL</h4>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/PERSIB/"><img src="footer/FB_LOGO.png" alt="Facebook"></a>
+        <a href="https://www.instagram.com/persib/"><img src="footer/Ig_logo.png" alt="Instagram"></a>
+      </div>
+    </div>
+
+    <div class="footer-section">
+      <h4>UNDUH APLIKASI</h4>
+      <div class="app-icons">
+        <a href="https://apps.apple.com/id/app/persib/id1240095475?l=id"><img src="footer/Appstore-white.webp" alt="App Store"></a>
+        <a href="https://play.google.com/store/apps/details?id=com.persib.persibpass"><img src="footer/Playstore-white.webp" alt="Google Play"></a>
+      </div>
+    </div>
+  </div>
+</footer>
+</script>
+</body>
+</html> 

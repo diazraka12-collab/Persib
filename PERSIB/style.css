@@ -1,0 +1,1310 @@
+
+/* Gunakan font Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #101f8f;
+  width: 100vw      ;
+overflow-x: hidden;
+}
+
+/* Navbar utama */
+   nav {
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: space-between; /* biar logo di kiri, hamburger di kanan */
+  align-items: center;
+  padding: 20px 40px;
+  position: relative;
+ position: fixed;
+  z-index: 10; /* biar di atas sidebar */
+  width: 100%;             /* 🔹 biar full lebar */
+  height: 110px;            /* 🔹 tinggi yang pas */
+  box-sizing: border-box;
+  z-index: 1000;           /* 🔹 pastikan di atas semua elemen */
+    border-bottom: 3px solid white;
+}
+nav, .menu a, .sidebar a, .hamburger {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+body::before {
+  content: "";
+  display: block;
+  height: 80px;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 90px;
+}
+
+/* Menu */
+.menu {
+  display: flex;
+  gap: 30px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+.menu a:hover {
+  color: #1e90ff;
+}
+
+/* Link aktif di menu utama */
+.menu a.active {
+  color: #1e90ff;
+  
+}
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 170px;
+  top: 20px;
+  left: 0;
+  overflow: hidden;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  z-index: 999;
+}
+
+.dropdown-content a {
+  display: block;
+  color: black;
+  padding: 10px 15px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.dropdown-content a:hover {
+  background-color: #0a0c9c;
+  color: white;
+}
+
+/* Saat hover tampilkan dropdown */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Hamburger icon (HP) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 6px;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background: white;
+}
+
+/* Sidebar menu (untuk HP) */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  padding-top: 80px;
+  transition: right 0.4s ease;
+  z-index: 2010;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 15px 30px;
+  border-bottom: 1px solid #222;
+}
+
+/* Garis bawah aktif di sidebar */
+.sidebar a:hover {
+      background-color: #111;
+    }
+
+    .sidebar.active {
+      right: 0;
+    }
+/* ==== DROPDOWN SIDEBAR (HP) ==== */
+.sidebar-dropdown {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-dropdown-content {
+  display: none;
+  flex-direction: column;
+  background-color: #111;
+}
+
+.sidebar-dropdown-content a {
+  padding-left: 50px;
+  font-weight: normal;
+  border-bottom: none;
+}
+
+.sidebar-dropdown-content a:hover {
+  background-color: #1e90ff;
+}
+
+.sidebar-dropdown.active .sidebar-dropdown-content {
+  display: flex;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+    position: absolute;
+    right: 20px; /* posisi di kanan */
+    top: px; /* agar sejajar dengan logo */
+  }
+}
+/* BERITA BERANDA!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+/* Bagian utama berita */
+.news-section {
+  width: 100%;
+  margin-top: 100px;
+  background-color: #f5f5f5;
+  padding: 60px 0px ;
+  display: flex;
+  justify-content: center;
+}
+
+.news-container {
+  display: flex;
+  background-color: white;
+  max-width: 1100px;
+    overflow: hidden; /* 🔹 biar gak ada bagian gambar yang keluar */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Bagian kiri - teks berita */
+.news-text {
+  background-color: #000000; /* Biru tua */
+  color: white;
+  flex: 1;
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.news-category {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #0011ff; /* Biru tua */
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.news-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-size: 2rem;
+  line-height: 1.2;
+  border-bottom: 4px solid #0011ff;
+  display: inline-block;
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+}
+
+.news-link {
+  color: #0011ff;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.news-link:hover {
+  color: white;
+  text-decoration: underline;
+  letter-spacing: 0.5px;
+}
+
+/* Bagian kanan - gambar */
+.news-image {
+  flex: 1.3;
+}
+
+.news-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+@media (max-width: 900px) {
+  .news-title {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .news-container {
+    flex-direction: column; /* 🔹 teks di atas, gambar di bawah */
+  }
+
+  .news-text {
+    padding: 30px 20px;
+    text-align: left;
+  }
+
+  .news-image img {
+    height: auto; /* biar proporsional */
+  }
+
+  .news-title {
+    font-size: 1.4rem;
+    border-bottom-width: 3px;
+  }
+
+  .news-link {
+    font-size: 0.95rem;
+  }
+}
+.last-section {
+  text-align: center;
+  padding: 50px 20px;
+  background: #ffffff;
+  max-width: 750px;
+  margin: 60px auto;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.last-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #0d47a1;
+}
+
+/* ======= Card ======= */
+.last-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #eef3ff;
+  padding: 25px;
+  border-radius: 14px;
+  position: relative;
+  overflow: hidden;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+/* ======= Teams ======= */
+.last-team {
+  text-align: center;
+  width: 35%;
+}
+
+.last-left .last-logo {
+  border: 3px solid #0d47a1;
+}
+
+.last-right .last-logo {
+  border: 3px solid #c62828;
+}
+
+.last-logo {
+  width: 85px;
+  height: 85px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  border-radius: 20%;
+  background: #fff;
+  padding: 8px;
+}
+
+.last-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* ======= Score ======= */
+.last-score {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #0d47a1;
+  width: 25%;
+  animation: scorePop 1.5s ease-in-out;
+}
+
+.last-divider {
+  margin: 0 10px;
+  color: #444;
+}
+
+.last-info {
+  margin-top: 20px;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* ======= Animations ======= */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scorePop {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* ======= Responsif ======= */
+@media (max-width: 600px) {
+  .last-card {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .last-team {
+    width: 100%;
+  }
+
+  .last-score {
+    font-size: 2.2rem;
+  }
+
+  .last-name {
+    font-size: 1rem;
+  }
+}
+
+.next-section {
+  text-align: center;
+  padding: 50px 20px;
+  background: #ffffff;
+  max-width: 750px;
+  margin: 60px auto;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.next-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #2b0bc8;
+}
+
+/* ======= Card ======= */
+.next-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #eafaf7;
+  padding: 25px;
+  border-radius: 14px;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+/* ======= Teams ======= */
+.next-team {
+  text-align: center;
+  width: 35%;
+}
+
+.next-left .next-logo {
+  border: 3px solid #0d47a1;
+}
+
+.next-right .next-logo {
+  border: 3px solid #d32f2f;
+}
+
+.next-logo {
+  width: 85px;
+  height: 75px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  border-radius: 20%;
+  background: #fff;
+  padding: 8px;
+}
+
+.next-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* ======= VS Text ======= */
+.next-vs {
+  width: 25%;
+  text-align: center;
+}
+
+.next-text {
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: #0e08d3;
+  animation: pulse 2s infinite;
+}
+
+/* ======= Info & Button ======= */
+.next-info {
+  margin-top: 20px;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.next-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 25px;
+  background-color: #1b0cc7;
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: background 0.3s;
+}
+
+.next-btn:hover {
+  background-color: #004d40;
+}
+
+/* ======= Animations ======= */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+}
+
+/* ======= Responsif ======= */
+@media (max-width: 600px) {
+  .next-card {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .next-team {
+    width: 100%;
+  }
+
+  .next-text {
+    font-size: 2rem;
+  }
+
+  .next-name {
+    font-size: 1rem;
+  }
+}
+    /* Sponsor Section */
+/* Sponsor Section */
+.sponsor-section {
+  background-color: #000;
+  padding: 50px 20px;
+  text-align: center;
+  width: 100%; /* ✅ ubah dari 100vw agar tidak overflow */
+  box-sizing: border-box;
+
+}
+
+.sponsor-section h2 {
+  text-align: left;
+  color: white;
+  margin-bottom: 25px;
+  font-size: 32px;
+  padding-left: 30px;
+}
+
+.sponsor-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px; /* ✅ dikurangi sedikit agar tidak terlalu renggang */
+  margin-top: 10px;
+}
+
+.sponsor-logos img {
+  max-height: 60px;
+  width: auto;
+  transition: transform 0.3s ease;
+  filter: brightness(95%);
+  object-fit: contain; /* ✅ pastikan tidak terpotong */
+}
+
+.sponsor-logos img:hover {
+  transform: scale(1.1);
+  filter: brightness(110%);
+}
+
+/* 🔹 Responsif HP */
+@media (max-width: 600px) {
+  .sponsor-section {
+    padding: 20px 10px;
+    border-top: 2px solid #ffffff;
+  }
+
+  .sponsor-section h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    padding-left: 10px;
+  }
+
+  .sponsor-logos {
+    gap: 16px;
+  }
+
+  .sponsor-logos img {
+    max-height: 40px; /* ✅ sedikit lebih besar agar tetap terlihat */
+  }
+}
+
+
+/*!!!!!!footer!!!!!!!*/
+/* Footer Biru Persib */
+.footer {
+  background-color: #000000;
+  color: white;
+  width: 100%;
+  padding: 40px 0;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  margin-top: auto;
+    border-top: 2px solid #ffffff;
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Kontainer utama */
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+  gap: 40px;
+  padding: 0 20px;
+}
+
+/* Logo besar */
+.footer-logo {
+  height: 60px;
+}
+
+/* Judul kecil di atas teks */
+.footer-section h4 {
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+/* Teks link */
+.footer-section a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+}
+.footer-logo-large {
+  width: 100px; /* ubah angka ini untuk memperbesar atau memperkecil */
+  height: auto;
+}
+/* Ikon sosmed & app */
+.social-icons img{
+  width: 45px;
+  margin: 0 8px;
+  transition: transform 0.3s ease;
+}
+.app-icons img {
+  width: 145px;
+  margin: 0 8px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons img:hover,
+.app-icons img:hover {
+  transform: scale(1.2);
+}
+
+/* 🔹 Responsif: Tablet & HP */
+@media (max-width: 768px) {
+  .sponsor-section h2 {
+    text-align: center;
+    padding-left: 0;
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .sponsor-logos {
+    gap: 20px;
+  }
+
+  .sponsor-logos img {
+    max-height: 40px; /* perkecil agar sejajar di HP */
+  }
+
+  .footer-container {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .footer-logo {
+    height: 80px;
+  }
+}
+
+/*!!!!!! PEMAIN !!!!!!!*/
+/* ====== Judul Posisi ====== */
+/*!!!!!! PEMAIN !!!!!!!*/
+.halaman-pemain {
+  background-color: #000; /* latar belakang hitam hanya untuk halaman pemain */
+  color: #fff; /* teks putih biar kontras */
+  padding-bottom: 60px;
+}
+.daftar-pemain {
+  background-color: #001489; /* warna biru Persib */
+  text-align: center;
+  padding: 190px 0 40px 0;
+}
+
+.daftar-pemain h1 {
+  color: white;
+  font-size: 60px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  margin: 0;
+  font-family: 'Oswald', sans-serif; /* mirip font Persib */
+}
+/* ====== Judul Posisi ====== */
+.posisi {
+  text-transform: uppercase;
+ 
+  font-size: 50px;
+  font-weight: 800;
+  margin: 90px 0 10px;
+  color: #fff;
+  text-align: left;
+  padding-left: 260px;
+  margin-top: 120px;
+}
+
+/* ====== Grid Pemain ====== */
+.player-grid {
+   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px; /* jarak antar card (lebih kecil dari sebelumnya) */
+  padding: 40px;
+  margin: 0 auto;
+  max-width: 1200px; /* supaya di tengah dan proporsional */
+}
+
+/* 🔹 Kiper tetap di tengah (biasanya 1–2 pemain) */
+.player-grid.kiper {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  justify-content: center;
+}
+/* ====== Kartu Pemain ====== */
+.player-card {
+  width: 30%;
+  border: 1px solid #fff; /* border putih */
+  background-color: #ffffff;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.player-card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0%;
+  height: 5px;
+  background-color: #00a3e0; /* biru muda khas City */
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+  border-radius: 3px;
+}
+
+.player-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.35);
+}
+.player-card.active {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+.player-card:hover .player-name {
+  background-color: #010715;
+  color: #ffffff;
+}
+
+/* 🔹 Garis bawah muncul saat hover */
+.player-card:hover::after {
+  width: 60%;
+}
+
+/* Gambar pemain */
+.player-card img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ====== Nama Pemain ====== */
+.player-name {
+  font-weight: 900;
+  font-size: 18px;
+  color: #031c3d;
+  padding: 15px;
+  text-transform: uppercase;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+
+/* 🔹 Responsif: Tablet */
+@media (max-width: 1024px) {
+  .player-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .posisi {
+    font-size: 30px;        /* kecilkan ukuran huruf */
+    padding-left: 20px;     /* geser ke kiri agar rapi */
+    margin-top: 60px;       /* beri jarak atas yang pas */
+    text-align: center;     /* bisa juga diganti ke 'center' jika mau di tengah */
+  }
+  .player-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 kolom agar pas di layar HP */
+    gap: 10px;
+  }
+
+  .daftar-pemain {
+    padding: 110px 0 20px 0;
+    text-align: center;
+  }
+
+  .player-card {
+    width: 100%;
+    max-width: 180px; /* batasi ukuran kartu */
+  }
+
+  .player-card img {
+    width: 100%;
+    height: 220px; /* kecilkan tinggi gambar */
+    object-fit: cover;
+  }
+
+  .player-name {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+
+/*!!!!!! JADWAL !!!!!!!*/
+/* JUDUL BULAN */
+.bulan {
+  max-width: 900px;
+  margin: 40px auto 20px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #fefefe;
+  margin-top: 150px;
+  margin-bottom: 20px;
+  margin-left: 150px;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+/* CARD PERTANDINGAN */
+.match-card {
+  max-width: 900px;
+  margin: 20px auto;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  transition: all 0.3s ease;
+}
+
+.match-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* HEADER CARD */
+.match-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.match-header .competition {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  color: #002aff;
+  text-transform: uppercase;
+}
+
+.match-header .competition img {
+  height: 44px;
+}
+
+.match-header .date {
+  color: #555;
+  font-size: 14px;
+}
+
+/* ISI CARD */
+.match-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.team {
+  width: 35%;
+}
+
+.team img {
+  height: 80px;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+.team span {
+  font-weight: 700;
+  font-size: 18px;
+  color: #001e6c;
+}
+
+.match-center {
+  width: 20%;
+}
+
+.match-center .time {
+  font-size: 20px;
+  font-weight: 700;
+  background: #001e6c;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+
+/* FOOTER */
+.match-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: #777;
+  margin-top: 10px;
+}
+
+.match-footer img {
+  height: 25px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 700px) {
+
+.bulan {
+  max-width: 900px;
+  margin: 40px auto 20px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #fefefe;
+  margin-top: 150px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  text-align: center;
+}
+ .match-card {
+    width: 90%;              /* 🔹 Tambahkan ruang kiri-kanan */
+    margin: 20px auto;       /* 🔹 Biar lebih tengah di HP */
+    padding: 5px;           /* 🔹 Sedikit lebih kecil padding */
+    border-radius: 10px;
+  }
+
+  .match-body {
+    flex-direction: column;
+  }
+
+  .team {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .match-center {
+    margin: 10px 0;
+  }
+}
+
+
+/* HASILLLL PERTANDINGANN!!!!!!!!!!!!!   */
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap');
+
+/* Bagian utama */
+.hasil-pertandingan {
+  font-family: 'Manrope', sans-serif;
+  background-color: #ffffff;
+  color: #111;
+  padding: 20px 10%;
+}
+
+/* Setiap pertandingan */
+.matchresult {
+  padding: 20px 0;
+  border-bottom: 1px solid #e0e0e0; /* garis pemisah antar pertandingan */
+}
+.judul-bulan {
+  font-size: 22px;
+  font-weight: 800;
+  border-left: 2px solid #ffffff;
+  padding-top: 100px;
+  margin: 40px 0 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Info atas (tanggal, stadion, kompetisi) */
+.matchresult-info {
+  display: flex;
+  justify-content: space-between;
+    align-items: center; /* sejajarkan vertikal */
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.matchresult-info .kompetisi {
+  font-weight: 600;
+  color: #333;
+}
+
+/* Isi utama pertandingan */
+.matchresult-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+/* Tim */
+.team {
+  display: flex;
+  align-items: center; /* sejajarkan logo dan nama tim */
+  gap: 10px;
+  width: 30%;
+  box-sizing: border-box;
+}
+
+.team span {
+  font-weight: 700;
+  font-size: 20px;
+    color: #000;
+  white-space: nowrap;
+  line-height: 1; /* hilangkan efek tinggi baris yang bikin beda tinggi */
+}
+
+.team img {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+    display: block;
+    aspect-ratio: 1 / 1; /* agar semua logo proporsional */
+}
+
+/* Skor */
+.score {
+  flex: 1;               /* agar skor berada di tengah secara fleksibel */
+  text-align: center;
+  font-size: 28px;
+  font-weight: 800;
+  color: #000;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .hasil-pertandingan {
+    padding: 20px;
+  }
+
+  .match-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .team span {
+    font-size: 16px;
+  }
+
+  .score {
+    font-size: 24px;
+  }
+}
+
+
+
+/* BERITA SECTION */
+body.halaman-berita {
+  margin-top: 120px;
+  background-color: #000000;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  overflow-x: hidden; /* cegah scroll horizontal */
+}
+.berita-section {
+  background-color: #000000; /* pastikan hitam full */
+  padding: 20px 90px 60px; /* tambah top padding agar tidak tertutup navbar */
+  color: #ffffff;
+  text-align: center;
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+    margin-top: 220px;
+}
+
+.judul-section {
+  font-size: 28px;
+  margin-bottom: 40px;
+  font-weight: 800;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  z-index: 1; /* pastikan tidak ketimpa navbar */
+}
+
+.berita-container {
+  display: flex;
+  justify-content: center;       /* biar konten di tengah */
+  flex-wrap: wrap;               /* biar bisa turun ke bawah di layar kecil */
+  gap: 20px;                     /* jarak antar card */
+  padding: 0 20px 40px;               /* atas bawah */
+  margin: 0 auto;                /* tengah otomatis */
+  max-width: 1200px;             /* batasi lebar maksimal */
+ }
+.berita-container h2 {
+  background-color: transparent;
+  color: #ffffff;
+  border-radius: 0px;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.berita-card {
+  background-color: #ffffff;
+  border-radius: 0;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.4);
+  overflow: hidden;
+  width: 300px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.berita-card:hover {
+  transform: translateY(-8px);
+  border-color: #0d83ab; /* efek hover biru seperti contoh */
+}
+
+.berita-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.berita-info {
+  padding: 20px;
+  text-align: left;
+}
+
+.berita-info h3 {
+  font-size: 17px;
+  color: rgb(0, 0, 0);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.berita-info p {
+  color: #000000;
+  font-size: 14px;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.baca-link {
+  color: #ffeb3b;
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.2s;
+}
+
+.baca-link:hover {
+  color: #ffffff;
+}
+@media (max-width: 768px) {
+  .berita-section {
+    padding: 100px 20px 40px;
+  }
+
+  .judul-section {
+    font-size: 22px;
+  }
+
+  .berita-card {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+/* ===== Foto ===== */
+.prsb-foto {
+  width: 100%;
+  text-align: center;
+  padding-top: 180px;
+}
+
+.prsb-foto img {
+  width: 90%;
+  max-width: 1000px;
+  border-radius: 12px;
+  margin-top: -40px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+/* ===== Judul ===== */
+.prsb-judul {
+  background-color: #00269a;
+  color: #fff;
+  text-align: left;
+  padding: 160px 60px 100px; /* padding atas disesuaikan dengan tinggi navbar */
+  margin-top: 0;
+}
+
+.prsb-judul h1 {
+  font-size: 5rem;
+  font-weight: 900;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.prsb-judul p {
+  font-size: 1.1rem;
+  color: #d0d0d0;
+}
+
+/* ===== Artikel ===== */
+.prsb-artikel {
+  background-color: #efeaea;
+  max-width: 900px;
+  margin: -60px auto 100px;
+  padding: 40px 30px;
+  border-radius: 8px;
+  line-height: 1.8;
+}
+
+.prsb-artikel p {
+  text-align: justify;
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+/* ===== Responsif ===== */
+@media (max-width: 768px) {
+  .prsb-judul {
+    padding: 120px 25px 60px;
+  }
+
+  .prsb-judul h1 {
+    font-size: 2.8rem;
+  }
+
+  .prsb-artikel {
+    margin: -40px 15px 80px;
+    padding: 25px;
+  }
+}

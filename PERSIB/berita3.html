@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width,
+initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<link rel ="icon" type ="image/png" href="favicon.png">
+<title>berita persib</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
+
+</head> 
+<body>
+<!-- Navbar -->
+   <nav>
+    <div class="logo">
+      <img src="beranda/logo persib nav.png" alt="Logo Persib">
+    </div>
+  
+       <div class="menu">
+      <a href="index.html">Beranda</a>
+      <a href="pemain.html">Pemain</a>
+     <!--  Dropdown Pertandingan -->
+    <div class="dropdown">
+      <a href="#">Pertandingan ▾</a>
+      <div class="dropdown-content">
+        <a href="jadwal.html">Jadwal</a>
+        <a href="hasil.html">Hasil Pertandingan</a>
+      </div>
+    </div>
+        <a href="berita.html"class="active">Berita</a>
+    </div>
+
+      <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </nav>
+    <div class="sidebar" id="sidebar">
+      <a href="index.html" >Beranda</a>
+      <a href="pemain.html">Pemain</a>
+      <div class="sidebar-dropdown">
+    <a href="#" onclick="toggleDropdown(event)">Pertandingan ▾</a>
+    <div class="sidebar-dropdown-content">
+      <a href="jadwal.html">Jadwal</a>
+      <a href="hasil.html">Hasil Pertandingan</a>
+    </div>
+  </div>
+
+  <a href="berita.html"class="active">Berita</a>
+</div>
+
+    <script>
+    function toggleMenu() {
+      document.getElementById("sidebar").classList.toggle("active");
+    }
+  </script>
+
+      <script>
+      function toggleSidebar() {
+        document.getElementById('sidebar').classList.toggle('active');
+      }
+      function toggleDropdown(event) {
+        event.preventDefault();
+        const dropdown = event.target.parentElement;
+        dropdown.classList.toggle('active');
+      }
+      </script>
+       
+         <!-- Foto -->
+  <section class="prsb-foto">
+    <img src="berita/berita3.jpg" alt="Beckham Putra Nugraha bersama PERSIB">
+  </section>
+
+       <!-- Judul -->
+  <section class="prsb-judul">
+    <h1>Cara Beckham Dapatkan Kepercayaan Pelatih</h1>
+    <p>Oleh: Tim Redaksi PERSIB</p>
+  </section>
+
+  <!-- Artikel -->
+  <article class="prsb-artikel">
+    <p>
+      Gelandang PERSIB, Beckham Putra Nugraha bertekad untuk selalu memberikan penampilan terbaiknya dalam setiap pertandingan. Hal itulah yang membuatnya berhasil mendapatkan tempat di tim utama PERSIB yang dihuni sejumlah nama besar.
+    </p>
+
+    <p>
+      Bahkan, pemain bernomor punggung 7 ini sempat dipercaya mengemban tugas sebagai kapten tim oleh pelatih PERSIB, Bojan Hodak dalam dua pertandingan kontra Arema FC dan Persita Tangerang di Super League 2025/26.
+    </p>
+
+    <p>
+      "Saya selalu memotivasi diri sendiri. Sebagai pemain, kita layak berada di dalam tim. Ketika mendapatkan kepercayaan pelatih, kita tentu harus bisa membuktikannya," ujar pemain yang akrab disapa Etam ini.
+    </p>
+
+    <p>
+      Beckham pun mengaku sangat menikmati tantangan dan persaingan ketat yang sehat di dalam tim PERSIB saat ini.
+    </p>
+
+    <p>
+      "Ada kompetisi di dalam tim. Kita harus membuktikan benar-benar layak berada di lapangan," tandas pemain Tim Nasional Indonesia ini.***
+    </p>
+  </article>
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-section footer-logo-section">
+      <img src="beranda/logo persib nav.png" alt="Logo Persib" class="footer-logo-large">
+    </div>
+
+    <div class="footer-section">
+      <h4>EMAIL</h4>
+      <p><a href="mailto:info@persib.co.id">info@persib.co.id</a></p>
+    </div>
+
+    <div class="footer-section">
+      <h4>MEDIA SOSIAL</h4>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/PERSIB/"><img src="footer/FB_LOGO.png" alt="Facebook"></a>
+        <a href="https://www.instagram.com/persib/"><img src="footer/Ig_logo.png" alt="Instagram"></a>
+      </div>
+    </div>
+
+    <div class="footer-section">
+      <h4>UNDUH APLIKASI</h4>
+      <div class="app-icons">
+        <a href="https://apps.apple.com/id/app/persib/id1240095475?l=id"><img src="footer/Appstore-white.webp" alt="App Store"></a>
+        <a href="https://play.google.com/store/apps/details?id=com.persib.persibpass"><img src="footer/Playstore-white.webp" alt="Google Play"></a>
+      </div>
+    </div>
+  </div>
+</footer>
+</script>
+</body>
+</html> 
